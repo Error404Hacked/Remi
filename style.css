@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: pink;
+
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    
+}
+
+h1 {
+    font-size: 4rem;
+    color: #f44336;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+button {
+    background-color: #f44336;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e53935;
+}
+
+#surprise-message {
+    display: none;
+    animation: fade-in 1s ease;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    height: 50vh;
+    width: 50vh;
+    animation: heartbeat 2s infinite;
+}
+
+.heart:before,
+.heart::after {
+    position: absolute;
+    content: "";
+    left: 25px;
+    top: 0;
+    width: 20px;
+    height: 32px;
+    background: red;
+    border-radius: 20px 20px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+
+}
+
+.heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(0.75);
+
+    }
+    20% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(0.75);
+    }
+    60% {
+        transform: 1;
+    }
+    80% {
+        transform: 0.75;
+    }
+    100% {
+        transform: 0.75;
+    }
+}
+
+
+
